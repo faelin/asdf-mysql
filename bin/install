@@ -28,7 +28,7 @@ install_MySQL() {
   # Very annoyingly, mysql changes compression extensions part way through
   rsync -zarv --include="*/" --include="*.gz" --include="*.xz" \
     --exclude="*" \
-    rsync://rsync.mirrorservice.org/ftp.mysql.com/Downloads/MySQL-"${MAJOR}.${MINOR}"/${FILE} \
+    rsync://rsync.mirrorservice.org/sites/ftp.mysql.com/Downloads/MySQL-"${MAJOR}.${MINOR}"/${FILE} \
     ${tmp_download_dir}/. 2>/dev/null
 
   # running this in a subshell
